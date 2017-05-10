@@ -9,19 +9,19 @@ This a little script realized with Perl impact over WordPress system that don't 
 
 ### Preparate Workspace
 
-####Install WWW::Mechanize on linux system
+Install WWW::Mechanize on linux system
 
 * `$ sudo cpan WWW::Mechanize`
 * Enjoy script.
 
-####Install WWW::Mechanize on windows system
+Install WWW::Mechanize on windows system
 
 * Open CMD of POWERSHELL
 * cd C:\'perlroute'\bin\cpan.exe
 * `cpan> install WWW::Mechanize`
 * Enjoy Script.
 
-####Note: Over Windows system for use perl you can download `http://strawberryperl.com/` or `https://www.activestate.com/activeperl`
+### Note: Over Windows system for use perl you can download `http://strawberryperl.com/` or `https://www.activestate.com/activeperl` ###
 
 ### How to use
 
